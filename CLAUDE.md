@@ -94,7 +94,7 @@ components/
   Header.tsx          # Fixed header with wordmark + nav + mobile hamburger menu (client component)
   Footer.tsx          # Footer with copyright + links
   Hero.tsx            # Hero section with CTAs
-  WorkGrid.tsx        # Bento-style project grid (Mirror featured, Golf AI + Apparel secondary)
+  WorkGrid.tsx        # Products grid (Sincere featured/in-dev, Apparel coming soon; no outbound links yet)
   Bros.tsx            # Social links section (Instagram, TikTok, X, YouTube)
   Statement.tsx       # Founders quote with accent line
   Services.tsx        # Sticky heading + service cards
@@ -103,7 +103,7 @@ components/
   ContactForm.tsx     # Contact form with client + server validation
   ScrollReveal.tsx    # Client component for scroll-triggered animations
 content/
-  projects.ts         # Typed project data (Mirror, Golf AI, Apparel)
+  projects.ts         # Typed product data (Sincere, Apparel) with honest status + tier
   bros.ts             # Social media links for Unbound Bros
 public/
   images/portraits/   # casey.jpg, nick.jpg

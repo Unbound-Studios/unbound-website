@@ -36,9 +36,6 @@ export default function Services() {
                   <p className="text-[0.92rem] text-text-secondary leading-[1.6]">
                     {svc.desc}
                   </p>
-                  <CalPopupButton className="font-mono text-[0.6rem] font-medium text-green hover:text-green-dim transition-colors duration-200 mt-3 inline-block">
-                    Book a call &rarr;
-                  </CalPopupButton>
                 </div>
               </div>
             </ScrollReveal>

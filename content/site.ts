@@ -23,14 +23,14 @@ export const aboutPage = {
   label: "About us",
   heading: "Living from the inside out.",
   paragraphs: [
-    "Unbound Studios is Casey Ring and Nick Jackson. We build our own products and brands, and help others build, brand, and ship theirs \u2014 companies, founders, and individuals.",
-    "We started this because most people inherit a script \u2014 what to want, who to be, what success looks like. We wanted to write our own. Not pitch decks. Not prototypes in a folder. Real products, real businesses, built on our own terms.",
-    "Nick sets the direction \u2014 business priorities, product strategy, brand. Casey builds the systems \u2014 infrastructure, automation, code, and everything that makes the vision operational. We sync daily, move fast, and cover the full cycle from idea to shipped product.",
+    "Unbound Studios is Casey Ring and Nick Jackson. We build our own products and brands. We also take a few clients, companies, founders, and individuals, who want the same thing built for them.",
+    "We started this because most people inherit a script. What to want, who to be, what success looks like. We wanted to write our own. Not pitch decks. Not prototypes in a folder. Real products, real businesses, built on our own terms.",
+    "Nick sets the direction: business priorities, product strategy, brand. Casey builds the systems: infrastructure, automation, code, and everything that makes the vision operational. We sync daily, move fast, and cover the full cycle from idea to shipped product.",
   ],
   metadata: {
-    title: "About \u2014 Unbound Studios",
+    title: "About. Unbound Studios",
     description:
-      "Two people who build, brand, and ship. Our own products, and yours. Based in Kansas.",
+      "Two people building their own products and brands, who also take a few clients. Based in Kansas.",
   },
 };
 
@@ -39,7 +39,7 @@ export const contactPage = {
   heading: "Tell us what you\u2019re working on.",
   body: "Book a discovery call or drop us a message. 30 minutes, no pitch deck, just straight answers about what would actually move the needle.",
   metadata: {
-    title: "Contact \u2014 Unbound Studios",
+    title: "Contact. Unbound Studios",
     description:
       "Book a discovery call or send us a message. AI, apps, automations, and strategy.",
   },

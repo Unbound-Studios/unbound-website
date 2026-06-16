@@ -1,12 +1,12 @@
 export const servicesPage = {
   label: "Work with us",
   heading: "Two people. Both sides covered.",
-  intro: "Casey covers the technical side: AI systems, automations, apps, and data infrastructure. Nick covers strategy, positioning, messaging, and go-to-market. Whether you\u2019re running a company, launching something new, or figuring out your next career move \u2014 we take calls together because the best answers usually live at the intersection.",
+  intro: "Casey covers the technical side: AI systems, automations, apps, and data infrastructure. Nick covers strategy, positioning, messaging, and go-to-market. Whether you\u2019re running a company, launching something new, or figuring out your next career move, we take calls together because the best answers usually live at the intersection.",
   cta: { heading: "30 minutes. Bring what you\u2019re working on.", href: "#cal" },
   metadata: {
-    title: "Services \u2014 Unbound Studios",
+    title: "Services. Unbound Studios",
     description:
-      "We build it, brand it, and ship it. AI, apps, strategy, and growth for companies and individuals. Book a discovery call.",
+      "Builders of our own products who also take a few clients. AI, apps, strategy, and growth for companies and individuals. Book a discovery call.",
   },
 };
 
@@ -14,7 +14,7 @@ export const servicesPageCategories = [
   {
     num: "01",
     title: "AI, Automations & Systems",
-    desc: "Get your team using AI that actually works \u2014 not a demo, not a slide deck. We coach, build, and wire it into your real operations.",
+    desc: "Get your team using AI that actually works, not a demo, not a slide deck. We coach, build, and wire it into your real operations.",
     offerings: [
       "Claude Code & AI workflow coaching",
       "Automation builds (n8n, agents, MCP)",
@@ -61,18 +61,18 @@ export const servicesPageCategories = [
 ];
 
 export const servicesHeading = {
-  title: "Build it. Brand it.",
+  title: "We take a few",
   titleBreak: true,
-  titleAccent: "Ship it.",
+  titleAccent: "clients too.",
   titlePrefix: "",
-  body: "Whether you\u2019re running a company, launching something new, or figuring out your next move. We take a small number of clients at a time.",
+  body: "Same hands that build our products, building yours. Whether you\u2019re running a company, launching something new, or figuring out your next move. A small number of clients at a time.",
 };
 
 export const services = [
   {
     num: "01",
     title: "AI, Automations & Systems",
-    desc: "Get your team using AI that actually works \u2014 coaching, automation builds, internal tools, and data pipelines.",
+    desc: "Get your team using AI that actually works. Coaching, automation builds, internal tools, and data pipelines.",
   },
   {
     num: "02",

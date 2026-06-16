@@ -18,9 +18,9 @@ export const projects: Project[] = [
     tagline: "A messaging app where nothing arrives now. You write it today. You later open when it matters.",
     description:
       "A messaging app where nothing arrives now. You write it today. You later open when it matters.",
-    status: "coming-soon",
-    statusLabel: "Coming soon",
-    tier: "secondary",
+    status: "in-development",
+    statusLabel: "In development",
+    tier: "featured",
     url: "#",
   },
   {
