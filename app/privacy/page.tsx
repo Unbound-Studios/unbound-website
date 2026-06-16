@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — Unbound Studios",
+  title: "Privacy Policy. Unbound Studios",
   description: "Privacy Policy for Unbound Studios products and services.",
 };
 

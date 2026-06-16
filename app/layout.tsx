@@ -14,15 +14,15 @@ const martianMono = Martian_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Unbound Studios \u2014 Build it. Brand it. Ship it.",
+  title: "Unbound Studios. We build our own products.",
   description:
-    "Two-person studio that builds, brands, and ships. Our own products, and yours. Apps, AI, strategy, and growth. Based in Kansas.",
+    "A two-person studio building its own products and brands. We also take a few clients. Apps, AI, strategy, and growth. Based in Kansas.",
   metadataBase: new URL("https://unboundapps.com"),
   alternates: { canonical: "https://unboundapps.com" },
   openGraph: {
     title: "Unbound Studios",
     description:
-      "Two-person studio that builds, brands, and ships. Our own products, and yours. Apps, AI, strategy, and growth. Based in Kansas.",
+      "A two-person studio building its own products and brands. We also take a few clients. Apps, AI, strategy, and growth. Based in Kansas.",
     siteName: "Unbound Studios",
     type: "website",
     images: ["/opengraph-image"],

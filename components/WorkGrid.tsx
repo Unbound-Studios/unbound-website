@@ -11,7 +11,7 @@ export default function WorkGrid() {
             What we&apos;re<br />building
           </h2>
           <div className="font-mono text-[0.65rem] text-text-tertiary text-right leading-[1.7]">
-            2 products<br />Coming soon
+            2 products<br />Building now
           </div>
         </div>
       </ScrollReveal>
