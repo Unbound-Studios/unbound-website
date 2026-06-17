@@ -1,7 +1,7 @@
 export const servicesPage = {
   label: "Work with us",
-  heading: "Two people. Both sides covered.",
-  intro: "Casey covers the technical side: AI systems, automations, apps, and data infrastructure. Nick covers strategy, positioning, messaging, and go-to-market. Whether you\u2019re running a company, launching something new, or figuring out your next career move, we take calls together because the best answers usually live at the intersection.",
+  heading: "Builders who take a few clients.",
+  intro: "Casey builds the technical side: AI, automations, apps, and data. Nick runs strategy, positioning, and growth. We take calls together, because the best answers usually live at the intersection.",
   cta: { heading: "30 minutes. Bring what you\u2019re working on.", href: "#cal" },
   metadata: {
     title: "Services. Unbound Studios",
@@ -12,9 +12,8 @@ export const servicesPage = {
 
 export const servicesPageCategories = [
   {
-    num: "01",
     title: "AI, Automations & Systems",
-    desc: "Get your team using AI that actually works, not a demo, not a slide deck. We coach, build, and wire it into your real operations.",
+    desc: "AI that actually works inside your operations, not a demo. We coach your team, build the automations, and wire it in.",
     offerings: [
       "Claude Code & AI workflow coaching",
       "Automation builds (n8n, agents, MCP)",
@@ -24,7 +23,6 @@ export const servicesPageCategories = [
     ],
   },
   {
-    num: "02",
     title: "Apps & MVPs",
     desc: "From idea to production. We build the thing, not a pitch about the thing.",
     offerings: [
@@ -35,7 +33,17 @@ export const servicesPageCategories = [
     ],
   },
   {
-    num: "03",
+    title: "Growth & Distribution",
+    desc: "We run it, not just advise on it. Social, campaigns, and content, managed end to end.",
+    offerings: [
+      "Social media management (done-for-you)",
+      "Brand strategy & creative direction",
+      "Organic & paid acquisition",
+      "Content strategy & production",
+      "Go-to-market & launch campaigns",
+    ],
+  },
+  {
     title: "Strategy & Positioning",
     desc: "Most companies are bad at explaining what they do. We fix that, then build the system to convert.",
     offerings: [
@@ -44,18 +52,6 @@ export const servicesPageCategories = [
       "Conversion copywriting (sales pages, launch emails)",
       "Pitch & deck strategy",
       "Go-to-market & launch strategy",
-    ],
-  },
-  {
-    num: "04",
-    title: "Growth & Distribution",
-    desc: "Build the audience, run the campaigns, and get the product in front of the right people.",
-    offerings: [
-      "Brand strategy & creative direction",
-      "Social media strategy & management",
-      "Organic & paid acquisition",
-      "Content strategy & coaching",
-      "Go-to-market & launch campaigns",
     ],
   },
 ];
@@ -70,18 +66,15 @@ export const servicesHeading = {
 
 export const services = [
   {
-    num: "01",
     title: "AI, Automations & Systems",
     desc: "Get your team using AI that actually works. Coaching, automation builds, internal tools, and data pipelines.",
   },
   {
-    num: "02",
     title: "Apps & MVPs",
     desc: "Mobile apps, web apps, websites. From first commit to production.",
   },
   {
-    num: "03",
-    title: "Strategy, Brand & Growth",
-    desc: "Positioning, brand strategy, conversion copy, and the distribution to get it seen.",
+    title: "Growth, Brand & Strategy",
+    desc: "Done-for-you social, campaigns, and brand, plus the positioning to make it all convert.",
   },
 ];

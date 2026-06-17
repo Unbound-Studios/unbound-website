@@ -88,6 +88,7 @@ app/
   contact/page.tsx    # Contact page with form
   contact/action.ts   # Server action (Resend email / console stub)
   about/page.tsx      # About page
+  services/page.tsx   # Services page: 4 collapsible <details> cards, order AI→Apps→Growth→Strategy, no number badges, first open
   privacy/page.tsx    # Privacy policy
   terms/page.tsx      # Terms of service
 components/
@@ -97,13 +98,14 @@ components/
   WorkGrid.tsx        # Products grid (Sincere featured/in-dev, Apparel coming soon; no outbound links yet)
   Bros.tsx            # Social links section (Instagram, TikTok, X, YouTube)
   Statement.tsx       # Founders quote with accent line
-  Services.tsx        # Sticky heading + service cards
+  Services.tsx        # Homepage services teaser: sticky heading + 3 de-numbered cards (mirrors /services order)
   Team.tsx            # Team portraits + bios
   ContactCTA.tsx      # Closing CTA with background watermark
   ContactForm.tsx     # Contact form with client + server validation
   ScrollReveal.tsx    # Client component for scroll-triggered animations
 content/
   projects.ts         # Typed product data (Sincere, Apparel) with honest status + tier
+  services.ts         # Services copy: /services categories (servicesPageCategories) + homepage teaser (services)
   bros.ts             # Social media links for Unbound Bros
 public/
   images/portraits/   # casey.jpg, nick.jpg
