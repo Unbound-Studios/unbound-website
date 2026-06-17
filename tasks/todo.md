@@ -1,45 +1,42 @@
-# Website Finish: Polish + Mobile Nav
+# Services page rewrite
+
+Goal: represent the four services better, order by client intent, cut clutter with collapsible cards.
+
+Scope: `app/services/page.tsx` + `content/services.ts`. Homepage `Services.tsx` left as-is (follow-up).
+
+## Decisions (with Casey)
+- Order: AI → Apps → Growth → Strategy. Growth ahead of Strategy because clients actively shop for distribution/social; positioning is the advisory layer that attaches to the rest.
+- Equal pillars: identical card treatment, no featured/hero card.
+- Dropped the `01–04` number badges. Numbers assert a ranking; without them, "last in reading order" no longer reads as "rated fourth." Priority now lives only in sequence. Also less clutter.
+- Visual: collapsible rows, no icons. First card open by default as a soft "start here."
+- SMM: promoted inside Growth & Distribution (lead bullet "Social media management (done-for-you)" + "we run it, not just advise" framing). Not a separate card, not the lead — revisit a standalone card once it's a proven revenue line.
 
 ## Build
-- [x] Header: `/#about` → `/about`
-- [x] Header: add skip-to-main link
-- [x] Header: add mobile hamburger menu (open/close, escape, outside click)
-- [x] WorkGrid: wrap Mirror card in `<Link href="/work/mirror">`
-- [x] WorkGrid: wrap Apparel card in `<Link href="/work/apparel">`
-- [x] Footer: add About link
-- [x] page.tsx: add `id="main"` to `<main>`
-- [x] sitemap.ts: add `/contact` entry
-- [x] privacy/page.tsx: remove unused `Link` import
-- [x] contact/action.ts: wrap console.log in dev-only check
-- [x] ContactForm.tsx: add `aria-invalid` + `aria-describedby` to all inputs
+- [x] `content/services.ts`: tightened intro; reordered categories AI → Apps → Growth → Strategy; removed `num`; sharpened Growth desc + lead offering for done-for-you social.
+- [x] `app/services/page.tsx`: each category is now a native `<details>/<summary>`. Collapsed shows title + one-line desc + chevron; expanded shows offerings + Book a call. First card `open`. Chevron rotates via `group-open:rotate-180`. Removed number badge.
+- [x] Design-system cleanup: `rounded-[18px]` → `rounded-2xl`, `duration-[350ms]` → `300ms`, dropped the `translate-x-1` hover jiggle (felt wrong on a clickable row), kept border-green + open:border-green.
 
 ## Verify
-- [x] `npm run lint` — zero warnings
-- [x] `npm run build` — clean build, all routes generated
-- [ ] Desktop: About header link → /about, Mirror card → /work/mirror, Apparel card → /work/apparel
-- [ ] Mobile (375px): hamburger visible, menu opens/closes, all links work
-- [ ] Tablet (768px): breakpoint transition behaves correctly
-- [ ] Skip-nav: tab into page, first focus shows "Skip to main content"
-- [ ] Contact form: submit empty, verify aria-invalid appears on inputs
-- [ ] Footer: About link present and working
+- [x] Renders at 1440 / 375. Cards in correct order, first open, others collapsed.
+- [x] Toggle works (expanded Growth → "Social media management (done-for-you)" leads). Native, no JS.
+- [x] 0 console errors (2 pre-existing font-preload warnings, unrelated).
+- Note: Turbopack panics on the worktree's symlinked `node_modules` ("symlink points out of filesystem root"). Verified with `next dev --webpack`. Not caused by these changes; flag if it bites the Vercel build.
 
 ## Review
 
 ### What changed
-- **Routing:** Three built pages (`/about`, `/work/mirror`, `/work/apparel`) were unreachable. Header About link pointed to a homepage scroll anchor, and WorkGrid cards were plain divs with hover effects but no links. All are now properly linked.
-- **Mobile nav:** Header is now a client component with a hamburger menu. Three animated bars toggle to an X. Dropdown shows Work, About, and Get in touch links. Closes on link click, outside click, or Escape.
-- **Accessibility:** Skip-to-main link added as first focusable element. Contact form inputs now have `aria-invalid` and `aria-describedby` for screen reader error reporting.
-- **Code cleanup:** Removed unused import, wrapped dev console.log so it doesn't fire in production, added `/contact` to sitemap, added `.mcp.json` to gitignore.
-- **Footer:** About link added alongside Privacy and Terms.
+- The `/services` page went from four always-expanded cards with `01–04` badges to four equal, collapsible cards with no numbers. Default view is four scannable title + one-liner rows; readers expand only what's relevant.
+- Heading changed to `Builders who take a few clients.` (was `Two people. Both sides covered.`) — leads with the product-first positioning.
+- Homepage `Services.tsx` teaser mirrored: de-numbered, single-column cards, third item relabeled `Growth, Brand & Strategy` (Growth-first) with done-for-you framing.
+- Env: this worktree was missing `.env.local` (the SessionStart hook only mirrored `.env`, which doesn't exist), so `CalPopupButton` rendered null and all booking buttons vanished. Restored via a `.env.local` symlink; the global hook now mirrors `.env.local` too.
+- Worktree/Turbopack: the global hook now APFS-clones `node_modules` for Next repos instead of symlinking (Turbopack panics on a symlink escaping the project root). Both global fixes live in `~/.claude/settings.json` + global CLAUDE.md, outside this repo.
+- Reordered to AI → Apps → Growth → Strategy. Priority is implied by sequence, not by visual weight or numbering.
+- Growth & Distribution now leads with done-for-you social media management and a "we run it" description, surfacing Nick's agency-style offering without re-centering the studio on it.
+- Tightened the intro paragraph.
 
 ### Teaching notes
-
-**Why make Header a client component?** The mobile menu needs `useState` for open/close state. This is the right tradeoff — the header is small, and the interactivity is genuinely needed. The desktop nav links still benefit from Next.js prefetching via `<Link>`.
-
-**Outside click pattern:** The `useEffect` registers `mousedown` and `keydown` listeners only when the menu is open, and cleans them up on close. This avoids permanent global listeners. The `menuRef` on the header element means clicks inside the entire header (including the hamburger button) won't trigger the outside-click handler.
-
-**aria-invalid + aria-describedby:** These attributes connect each input to its error message for screen readers. `aria-invalid` signals the field has an error, and `aria-describedby` points to the error `<p>` by `id`. The error `<p>` only renders when there's an error, which is fine — `aria-describedby` referencing a non-existent ID is silently ignored.
-
-**WorkGrid linking strategy:** Only Mirror and Apparel cards are wrapped in `<Link>` because those are the only case study pages that exist. Calendar, Predictions, and Bros remain as non-clickable cards. When new case study pages are built, wrapping them is a one-line change.
-
-**To extend:** Consider adding an animated slide-down transition on the mobile menu panel (CSS `max-height` transition or `framer-motion`). The current show/hide is instant, which is functional but could feel smoother.
+- **Why native `<details>` instead of a client component with `useState`?** The collapse is pure show/hide with no shared state, no analytics on toggle, no need to coordinate cards. `<details>/<summary>` gives keyboard support, correct ARIA (expanded/collapsed announced), and works with zero JS — so the page stays a server component and ships nothing to the client for this. It's the smallest thing that does the job. If we later want true accordion behavior (only one open at a time) or to track which cards get opened, that's when a client component earns its place.
+- **The chevron rotation** uses Tailwind's `group` + `group-open:` variant: `<details className="group">` and `group-open:rotate-180` on the SVG. The `open` state on the parent drives the child's transform, no JS. `[&_summary::-webkit-details-marker]:hidden` + `list-none` kill the default disclosure triangle.
+- **Why drop the numbers, design-wise?** Numbering is the one element that asserts rank rather than implying it. For "equal pillars," it had to go. Reading order still front-loads the differentiators (AI, Apps); the intro copy carries the "AI is our edge" message that layout no longer does. That's a deliberate trade: less visual pop for AI, in exchange for none of the four looking like a runt.
+- **Ordering rationale to defend later:** AI + Apps lead on both intent and differentiation. Between the rest, Growth beats Strategy because people actively go shopping for distribution/social and pay retainers for it, while positioning is rarely sought directly. So Growth third, Strategy fourth.
+- **To extend:** if SMM becomes a real revenue line, split it into its own card (5 cards, or fold Strategy into Growth). If you want one-open-at-a-time, convert to a small client component tracking an open index. To match the homepage `Services.tsx` (still 3 merged items with numbers), apply the same order + de-numbering there.

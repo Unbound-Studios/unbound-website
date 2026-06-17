@@ -24,19 +24,14 @@ export default function Services() {
         {/* Right: service cards */}
         <div className="flex flex-col gap-4">
           {services.map((svc, i) => (
-            <ScrollReveal key={svc.num} delay={i as 0 | 1 | 2 | 3}>
-              <div className="p-8 rounded-[18px] bg-white border border-border grid grid-cols-[auto_1fr] gap-6 items-start hover:border-green hover:shadow-[0_4px_20px_rgba(59,156,111,0.06)] hover:translate-x-1 transition-all duration-[350ms]">
-                <div className="font-mono text-[0.6rem] font-medium text-green bg-green-light w-9 h-9 flex items-center justify-center rounded-[10px]">
-                  {svc.num}
-                </div>
-                <div>
-                  <h3 className="font-sans text-[1.15rem] font-bold text-ink mb-1.5">
-                    {svc.title}
-                  </h3>
-                  <p className="text-[0.92rem] text-text-secondary leading-[1.6]">
-                    {svc.desc}
-                  </p>
-                </div>
+            <ScrollReveal key={svc.title} delay={i as 0 | 1 | 2 | 3}>
+              <div className="p-8 rounded-2xl bg-white border border-border hover:border-green hover:shadow-[0_4px_20px_rgba(59,156,111,0.06)] transition-all duration-300">
+                <h3 className="font-sans text-[1.15rem] font-bold text-ink mb-1.5">
+                  {svc.title}
+                </h3>
+                <p className="text-[0.92rem] text-text-secondary leading-[1.6]">
+                  {svc.desc}
+                </p>
               </div>
             </ScrollReveal>
           ))}

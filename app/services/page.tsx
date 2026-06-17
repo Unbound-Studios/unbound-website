@@ -48,36 +48,52 @@ export default function ServicesPage() {
           {/* Service categories */}
           <div className="flex flex-col gap-4 mb-16">
             {servicesPageCategories.map((svc, i) => (
-              <ScrollReveal key={svc.num} delay={Math.min(i, 3) as 0 | 1 | 2 | 3}>
-                <div className="p-8 rounded-[18px] bg-white border border-border hover:border-green hover:shadow-[0_4px_20px_rgba(59,156,111,0.06)] hover:translate-x-1 transition-all duration-[350ms]">
-                  <div className="grid grid-cols-[auto_1fr] gap-6 items-start">
-                    <div className="font-mono text-[0.6rem] font-medium text-green bg-green-light w-9 h-9 flex items-center justify-center rounded-[10px]">
-                      {svc.num}
-                    </div>
+              <ScrollReveal key={svc.title} delay={Math.min(i, 3) as 0 | 1 | 2 | 3}>
+                <details
+                  open={i === 0}
+                  className="group rounded-2xl bg-white border border-border open:border-green hover:border-green transition-colors duration-300 [&_summary::-webkit-details-marker]:hidden"
+                >
+                  <summary className="flex items-start justify-between gap-6 p-8 cursor-pointer list-none">
                     <div>
                       <h3 className="font-sans text-[1.15rem] font-bold text-ink mb-1.5">
                         {svc.title}
                       </h3>
-                      <p className="text-[0.92rem] text-text-secondary leading-[1.6] mb-4">
+                      <p className="text-[0.92rem] text-text-secondary leading-[1.6]">
                         {svc.desc}
                       </p>
-                      <ul className="space-y-1.5 mb-4">
-                        {svc.offerings.map((item) => (
-                          <li
-                            key={item}
-                            className="text-[0.85rem] text-text-secondary leading-[1.5] flex gap-2.5 items-start"
-                          >
-                            <span className="w-1 h-1 rounded-full bg-green mt-[0.45rem] shrink-0" />
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
-                      <CalPopupButton className="font-mono text-[0.6rem] font-medium text-green hover:text-green-dim transition-colors duration-200 inline-block">
-                        Book a call &rarr;
-                      </CalPopupButton>
                     </div>
+                    <svg
+                      className="shrink-0 mt-1 text-text-tertiary transition-transform duration-300 group-open:rotate-180"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      aria-hidden="true"
+                    >
+                      <polyline points="6 9 12 15 18 9" />
+                    </svg>
+                  </summary>
+                  <div className="px-8 pb-8 -mt-1">
+                    <ul className="space-y-1.5 mb-4">
+                      {svc.offerings.map((item) => (
+                        <li
+                          key={item}
+                          className="text-[0.85rem] text-text-secondary leading-[1.5] flex gap-2.5 items-start"
+                        >
+                          <span className="w-1 h-1 rounded-full bg-green mt-[0.45rem] shrink-0" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                    <CalPopupButton className="font-mono text-[0.6rem] font-medium text-green hover:text-green-dim transition-colors duration-200 inline-block">
+                      Book a call &rarr;
+                    </CalPopupButton>
                   </div>
-                </div>
+                </details>
               </ScrollReveal>
             ))}
           </div>
