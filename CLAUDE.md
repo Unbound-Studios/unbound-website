@@ -105,7 +105,7 @@ components/
   ScrollReveal.tsx    # Client component for scroll-triggered animations
 content/
   projects.ts         # Typed product data (Sincere, Apparel) with honest status + tier
-  services.ts         # Services copy: /services categories (servicesPageCategories) + homepage teaser (services)
+  services.ts         # Services copy: /services categories (servicesPageCategories) + homepage teaser (services). Voice: audience-open (companies, side projects, individuals leveling up at work) and partner-framed (coach/build-with-you, not only done-for-you); keep the "a few clients" scarcity. Mirror this in site.ts/homepage.ts/team.ts client-facing copy.
   bros.ts             # Social media links for Unbound Bros
 public/
   images/portraits/   # casey.jpg, nick.jpg

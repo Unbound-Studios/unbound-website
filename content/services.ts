@@ -1,6 +1,6 @@
 export const servicesPage = {
   label: "Work with us",
-  heading: "Builders who take a few clients.",
+  heading: "Partners who take a few clients.",
   intro: "Casey builds the technical side: AI, automations, apps, and data. Nick runs strategy, positioning, and growth. We take calls together, because the best answers usually live at the intersection.",
   cta: { heading: "30 minutes. Bring what you\u2019re working on.", href: "#cal" },
   metadata: {
@@ -13,11 +13,11 @@ export const servicesPage = {
 export const servicesPageCategories = [
   {
     title: "AI, Automations & Systems",
-    desc: "AI that actually works inside your operations, not a demo. We coach your team, build the automations, and wire it in.",
+    desc: "AI that actually works in your world, not a demo. Whether it’s a company, a side project, or just getting sharper at your own work, we coach you through it, build the automations, and wire it in.",
     offerings: [
       "Claude Code & AI workflow coaching",
       "Automation builds (n8n, agents, MCP)",
-      "Internal tools & dashboards",
+      "Custom tools & dashboards",
       "AI-ready data pipelines & schema cleanup",
       "AI audit & strategy",
     ],
@@ -34,7 +34,7 @@ export const servicesPageCategories = [
   },
   {
     title: "Growth & Distribution",
-    desc: "We run it, not just advise on it. Social, campaigns, and content, managed end to end.",
+    desc: "We’ll run it for you or build it with you. Social, campaigns, and content, for a company, a brand, or just you.",
     offerings: [
       "Social media management (done-for-you)",
       "Brand strategy & creative direction",
@@ -45,7 +45,7 @@ export const servicesPageCategories = [
   },
   {
     title: "Strategy & Positioning",
-    desc: "Most companies are bad at explaining what they do. We fix that, then build the system to convert.",
+    desc: "Most people are bad at explaining what they do. We fix that, then build the system to convert.",
     offerings: [
       "Market positioning & messaging",
       "Offer design & monetization",
@@ -61,13 +61,13 @@ export const servicesHeading = {
   titleBreak: true,
   titleAccent: "clients too.",
   titlePrefix: "",
-  body: "Same hands that build our products, building yours. Whether you\u2019re running a company, launching something new, or figuring out your next move. A small number of clients at a time.",
+  body: "Same hands that build our products, now in your corner. Whether you\u2019re running a company, growing a side project, leveling up at work, or figuring out your next move. A small number of clients at a time.",
 };
 
 export const services = [
   {
     title: "AI, Automations & Systems",
-    desc: "Get your team using AI that actually works. Coaching, automation builds, internal tools, and data pipelines.",
+    desc: "Get AI actually working for you. Coaching, automation builds, custom tools, and data pipelines.",
   },
   {
     title: "Apps & MVPs",
@@ -75,6 +75,6 @@ export const services = [
   },
   {
     title: "Growth, Brand & Strategy",
-    desc: "Done-for-you social, campaigns, and brand, plus the positioning to make it all convert.",
+    desc: "Social, campaigns, and brand, run for you or built with you, plus the positioning to make it convert.",
   },
 ];

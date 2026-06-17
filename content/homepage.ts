@@ -5,7 +5,7 @@ export const hero = {
   headingAccent: "Unbound.",
   headingEnd: "",
   subheading:
-    "We build our own products and brands. We also take a few clients who want the same.",
+    "We build our own products and brands. We also take on a few clients, whatever they’re working toward.",
   primaryCta: { label: "See what we're building", url: "#products" },
   secondaryCta: { label: "Work with us", url: "/services" },
 };

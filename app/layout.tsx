@@ -54,7 +54,7 @@ export default function RootLayout({
               name: "Unbound Studios",
               url: "https://unboundapps.com",
               description:
-                "Two-person studio that builds, brands, and ships. Our own products, and yours. Apps, AI, strategy, and growth. Based in Kansas.",
+                "Two-person studio that builds, brands, and ships. Our own products, and our clients'. Apps, AI, strategy, and growth. Based in Kansas.",
               founders: [
                 { "@type": "Person", name: "Casey Ring" },
                 { "@type": "Person", name: "Nick Jackson" },
