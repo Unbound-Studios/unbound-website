@@ -23,7 +23,7 @@ export const aboutPage = {
   label: "About us",
   heading: "Living from the inside out.",
   paragraphs: [
-    "Unbound Studios is Casey Ring and Nick Jackson. We build our own products and brands. We also take a few clients, companies, founders, and individuals, who want the same thing built for them.",
+    "Unbound Studios is Casey Ring and Nick Jackson. We build our own products and brands. We also take on a few clients, companies, founders, and individuals alike, and put the same care into their work as we put into our own.",
     "We started this because most people inherit a script. What to want, who to be, what success looks like. We wanted to write our own. Not pitch decks. Not prototypes in a folder. Real products, real businesses, built on our own terms.",
     "Nick sets the direction: business priorities, product strategy, brand. Casey builds the systems: infrastructure, automation, code, and everything that makes the vision operational. We sync daily, move fast, and cover the full cycle from idea to shipped product.",
   ],
