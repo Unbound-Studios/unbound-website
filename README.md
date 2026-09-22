@@ -1,5 +1,10 @@
 # Unbound Studios Website
 
+> **⚠️ ARCHIVED:** This site is retired. `unboundapps.com` now permanently redirects to
+> [growwithunbound.com](https://growwithunbound.com). The active site source is at
+> `/Users/CaseyRing/unbound-studios-dev/growwithunbound`. See [CLAUDE.md](CLAUDE.md) for details.
+> Do not deploy this repo to production without explicit instruction.
+
 The official website for Unbound Studios - building lean, ethical, and impactful digital products that solve real problems in overlooked markets.
 
 ## About

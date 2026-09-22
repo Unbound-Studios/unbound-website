@@ -1,6 +1,13 @@
 # My name is Casey
 This file provides guidance to Claude Code when working with this repository.
 
+## ⚠️ ARCHIVED — this site is retired
+This repo is the **former** Unbound Studios website. It is no longer live.
+- `unboundapps.com` and `www.unboundapps.com` now permanently redirect (308) to `https://growwithunbound.com`.
+- The Vercel project for this repo (`unbound-website`) serves only that redirect now; its Git auto-deploy has been disconnected so pushes here won't restore the old site.
+- The active agency site source lives at `/Users/CaseyRing/unbound-studios-dev/growwithunbound`.
+- Do not deploy this repo to production without explicit instruction from Casey.
+
 ## Workflow Requirements
 - Update CLAUDE.md before every git commit
 - Always ask clarifying questions in planning mode
@@ -36,7 +43,7 @@ This file provides guidance to Claude Code when working with this repository.
 - **Fonts:** Martian Mono (display/mono) + Figtree (body/sans) via `next/font/google`
 - **Analytics:** PostHog (autocapture, session recordings, custom events)
 - **Email:** Resend (contact form; falls back to console.log in dev without API key)
-- **Deployment:** Vercel (live at unboundapps.com)
+- **Deployment:** Vercel — archived, see "ARCHIVED" notice above. No longer live at unboundapps.com.
 
 ## Development Commands
 - `npm run dev` - Start development server (localhost:3000)
